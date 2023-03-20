@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230312 22:06:42.043" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\pvystavkin-admin\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Library">
+<arg>RPA.Browser.Selenium</arg>
+<arg>auto_close=${FALSE}</arg>
+<msg timestamp="20230312 22:20:06.163" level="FAIL">No keyword with name 'Library' found.</msg>
+<status status="FAIL" starttime="20230312 22:20:06.163" endtime="20230312 22:20:06.163"/>
+</kw>
+<kw name="Library">
+<arg>RPA.HTTP</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.166" endtime="20230312 22:20:06.166"/>
+</kw>
+<kw name="Library">
+<arg>RPA.Excel.Files</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.168" endtime="20230312 22:20:06.169"/>
+</kw>
+<kw name="Library">
+<arg>RPA.PDF</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.171" endtime="20230312 22:20:06.171"/>
+</kw>
+<kw name="Library">
+<arg>RPA.Tables</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.173" endtime="20230312 22:20:06.173"/>
+</kw>
+<kw name="*** Tasks ***">
+<status status="NOT RUN" starttime="20230312 22:20:06.175" endtime="20230312 22:20:06.175"/>
+</kw>
+<kw name="Order robots from RobotSpareBin Industries Inc">
+<status status="NOT RUN" starttime="20230312 22:20:06.176" endtime="20230312 22:20:06.177"/>
+</kw>
+<kw name="Open the robot order website">
+<status status="NOT RUN" starttime="20230312 22:20:06.179" endtime="20230312 22:20:06.179"/>
+</kw>
+<kw name="Download the Excel file">
+<status status="NOT RUN" starttime="20230312 22:20:06.179" endtime="20230312 22:20:06.179"/>
+</kw>
+<kw name="*** Keywords ***">
+<status status="NOT RUN" starttime="20230312 22:20:06.183" endtime="20230312 22:20:06.183"/>
+</kw>
+<kw name="Open the robot order website">
+<status status="NOT RUN" starttime="20230312 22:20:06.185" endtime="20230312 22:20:06.185"/>
+</kw>
+<kw name="Open Available Browser">
+<status status="NOT RUN" starttime="20230312 22:20:06.188" endtime="20230312 22:20:06.188"/>
+</kw>
+<kw name="Download the Excel file">
+<status status="NOT RUN" starttime="20230312 22:20:06.188" endtime="20230312 22:20:06.188"/>
+</kw>
+<kw name="Download">
+<arg>https://robotsparebinindustries.com/orders.csv</arg>
+<arg>overwrite=True</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.190" endtime="20230312 22:20:06.190"/>
+</kw>
+<kw name="Read table from CSV">
+<var>${orders}</var>
+<arg>orders.csv</arg>
+<arg>header=TRUE</arg>
+<status status="NOT RUN" starttime="20230312 22:20:06.193" endtime="20230312 22:20:06.193"/>
+</kw>
+<kw name="Open the robot order website">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<status status="PASS" starttime="20230312 22:30:12.365" endtime="20230312 22:30:16.475"/>
+</kw>
+<status status="PASS" starttime="20230312 22:30:12.364" endtime="20230312 22:30:16.475"/>
+</kw>
+<kw name="Download the Excel file">
+<kw name="Download" library="RPA.HTTP">
+<arg>https://robotsparebinindustries.com/orders.csv</arg>
+<arg>overwrite=True</arg>
+<doc>An alias for the ``HTTP Get`` keyword.</doc>
+<status status="PASS" starttime="20230312 22:30:16.476" endtime="20230312 22:30:17.270"/>
+</kw>
+<kw name="Read table from CSV" library="RPA.Tables">
+<var>${orders}</var>
+<arg>orders.csv</arg>
+<arg>header=TRUE</arg>
+<doc>Read a CSV file as a table.</doc>
+<msg timestamp="20230312 22:30:17.279" level="INFO">${orders} = Table(columns=['Order number', 'Head', 'Body', 'Legs', 'Address'], rows=20)</msg>
+<status status="PASS" starttime="20230312 22:30:17.270" endtime="20230312 22:30:17.280"/>
+</kw>
+<status status="PASS" starttime="20230312 22:30:16.475" endtime="20230312 22:30:17.280"/>
+</kw>
+<kw name="Read table from CSV" library="RPA.Tables">
+<var>${orders}</var>
+<doc>Read a CSV file as a table.</doc>
+<msg timestamp="20230314 14:35:22.987" level="FAIL">Keyword 'RPA.Tables.Read table from CSV' expected 1 to 7 arguments, got 0.</msg>
+<status status="FAIL" starttime="20230314 14:35:22.986" endtime="20230314 14:35:22.988"/>
+</kw>
+<kw name="Download" library="RPA.HTTP">
+<arg>https://robotsparebinindustries.com/orders.csv</arg>
+<arg>overwrite=True</arg>
+<doc>An alias for the ``HTTP Get`` keyword.</doc>
+<status status="PASS" starttime="20230314 14:35:53.787" endtime="20230314 14:35:54.889"/>
+</kw>
+<kw name="Read table from CSV" library="RPA.Tables">
+<var>${orders}</var>
+<doc>Read a CSV file as a table.</doc>
+<msg timestamp="20230314 14:36:03.922" level="FAIL">Keyword 'RPA.Tables.Read table from CSV' expected 1 to 7 arguments, got 0.</msg>
+<status status="FAIL" starttime="20230314 14:36:03.922" endtime="20230314 14:36:03.922"/>
+</kw>
+<kw name="Library">
+<arg>RPA.Tables</arg>
+<msg timestamp="20230314 14:36:16.485" level="FAIL">No keyword with name 'Library' found.</msg>
+<status status="FAIL" starttime="20230314 14:36:16.485" endtime="20230314 14:36:16.485"/>
+</kw>
+<kw name="Read table from CSV" library="RPA.Tables">
+<var>${orders}</var>
+<doc>Read a CSV file as a table.</doc>
+<msg timestamp="20230314 14:36:44.073" level="FAIL">Keyword 'RPA.Tables.Read table from CSV' expected 1 to 7 arguments, got 0.</msg>
+<status status="FAIL" starttime="20230314 14:36:44.073" endtime="20230314 14:36:44.073"/>
+</kw>
+<kw name="Read table from CSV" library="RPA.Tables">
+<var>${orders}</var>
+<arg>orders.csv</arg>
+<arg>header=FALLSE</arg>
+<doc>Read a CSV file as a table.</doc>
+<msg timestamp="20230314 14:37:54.671" level="INFO">${orders} = Table(columns=['Order number', 'Head', 'Body', 'Legs', 'Address'], rows=20)</msg>
+<status status="PASS" starttime="20230314 14:37:54.665" endtime="20230314 14:37:54.671"/>
+</kw>
+<kw name="${orders}[1]">
+<msg timestamp="20230314 14:38:19.288" level="FAIL">No keyword with name '${orders}[1]' found.</msg>
+<status status="FAIL" starttime="20230314 14:38:19.288" endtime="20230314 14:38:19.288"/>
+</kw>
+<kw name="${orders}[0]">
+<msg timestamp="20230314 14:38:25.039" level="FAIL">No keyword with name '${orders}[0]' found.</msg>
+<status status="FAIL" starttime="20230314 14:38:25.038" endtime="20230314 14:38:25.039"/>
+</kw>
+<kw name="log ${order}[1]">
+<msg timestamp="20230314 14:38:40.761" level="FAIL">No keyword with name 'log ${order}[1]' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20230314 14:38:40.761" endtime="20230314 14:38:40.761"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${orders}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:38:58.192" endtime="20230314 14:38:58.196"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>1</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:39:39.186" endtime="20230314 14:39:39.187"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>2</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:39:43.768" endtime="20230314 14:39:43.769"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>10000</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:39:49.089" endtime="20230314 14:39:49.089"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>[1]</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:39:55.241" endtime="20230314 14:39:55.242"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>[HEAD</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:40:06.330" endtime="20230314 14:40:06.331"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${orders}</arg>
+<arg>[HEAD]</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:40:11.836" endtime="20230314 14:40:11.837"/>
+</kw>
+<for flavor="IN">
+<var>${order}</var>
+<value>${orders}</value>
+<iter>
+<var name="${order}">Table(columns=['Order number', 'Head', 'Body', 'Legs', 'Address'], rows=20)</var>
+<kw name="Get orders">
+<arg>${order}</arg>
+<msg timestamp="20230314 14:41:56.940" level="FAIL">No keyword with name 'Get orders' found. Did you try using keyword 'RPA.HTTP.GET' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20230314 14:41:56.940" endtime="20230314 14:41:56.940"/>
+</kw>
+<status status="FAIL" starttime="20230314 14:41:56.931" endtime="20230314 14:41:56.941"/>
+</iter>
+<status status="FAIL" starttime="20230314 14:41:56.930" endtime="20230314 14:41:56.941"/>
+</for>
+<for flavor="IN">
+<var>${order}</var>
+<value>${orders}</value>
+<iter>
+<var name="${order}">Table(columns=['Order number', 'Head', 'Body', 'Legs', 'Address'], rows=20)</var>
+<kw name="Log" library="BuiltIn">
+<arg>${order}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:42:05.990" endtime="20230314 14:42:05.991"/>
+</kw>
+<status status="PASS" starttime="20230314 14:42:05.990" endtime="20230314 14:42:05.991"/>
+</iter>
+<status status="PASS" starttime="20230314 14:42:05.990" endtime="20230314 14:42:05.991"/>
+</for>
+<kw name="Get Count" library="BuiltIn">
+<arg>${order}</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<msg timestamp="20230314 14:42:15.391" level="FAIL">Keyword 'BuiltIn.Get Count' expected 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230314 14:42:15.390" endtime="20230314 14:42:15.391"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${order}</arg>
+<arg>0</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:42:20.574" endtime="20230314 14:42:20.575"/>
+</kw>
+<kw name="Get Count" library="BuiltIn">
+<arg>${order}</arg>
+<arg>1</arg>
+<doc>Returns and logs how many times ``item`` is found from ``container``.</doc>
+<status status="PASS" starttime="20230314 14:42:24.837" endtime="20230314 14:42:24.837"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${count}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.065" endtime="20230314 14:46:16.065"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.065" endtime="20230314 14:46:16.065"/>
+</iter>
+<iter>
+<var name="${count}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.066" endtime="20230314 14:46:16.066"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.066" endtime="20230314 14:46:16.066"/>
+</iter>
+<iter>
+<var name="${count}">3</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.066" endtime="20230314 14:46:16.067"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.066" endtime="20230314 14:46:16.067"/>
+</iter>
+<iter>
+<var name="${count}">4</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.067" endtime="20230314 14:46:16.067"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.067" endtime="20230314 14:46:16.067"/>
+</iter>
+<iter>
+<var name="${count}">5</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.068" endtime="20230314 14:46:16.068"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.067" endtime="20230314 14:46:16.068"/>
+</iter>
+<iter>
+<var name="${count}">6</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.068" endtime="20230314 14:46:16.069"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.068" endtime="20230314 14:46:16.069"/>
+</iter>
+<iter>
+<var name="${count}">7</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.069" endtime="20230314 14:46:16.070"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.069" endtime="20230314 14:46:16.070"/>
+</iter>
+<iter>
+<var name="${count}">8</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.070" endtime="20230314 14:46:16.070"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.070" endtime="20230314 14:46:16.070"/>
+</iter>
+<iter>
+<var name="${count}">9</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.070" endtime="20230314 14:46:16.071"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.070" endtime="20230314 14:46:16.071"/>
+</iter>
+<iter>
+<var name="${count}">10</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.071" endtime="20230314 14:46:16.071"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.071" endtime="20230314 14:46:16.071"/>
+</iter>
+<iter>
+<var name="${count}">11</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.072" endtime="20230314 14:46:16.072"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.072" endtime="20230314 14:46:16.072"/>
+</iter>
+<iter>
+<var name="${count}">12</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.072" endtime="20230314 14:46:16.072"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.072" endtime="20230314 14:46:16.072"/>
+</iter>
+<iter>
+<var name="${count}">13</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.073" endtime="20230314 14:46:16.073"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.072" endtime="20230314 14:46:16.073"/>
+</iter>
+<iter>
+<var name="${count}">14</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.073" endtime="20230314 14:46:16.073"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.073" endtime="20230314 14:46:16.073"/>
+</iter>
+<iter>
+<var name="${count}">15</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.073" endtime="20230314 14:46:16.074"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.073" endtime="20230314 14:46:16.074"/>
+</iter>
+<iter>
+<var name="${count}">16</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.074" endtime="20230314 14:46:16.082"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.074" endtime="20230314 14:46:16.082"/>
+</iter>
+<iter>
+<var name="${count}">17</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.082" endtime="20230314 14:46:16.083"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.082" endtime="20230314 14:46:16.083"/>
+</iter>
+<iter>
+<var name="${count}">18</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.083" endtime="20230314 14:46:16.083"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.083" endtime="20230314 14:46:16.083"/>
+</iter>
+<iter>
+<var name="${count}">19</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 14:46:16.083" endtime="20230314 14:46:16.084"/>
+</kw>
+<status status="PASS" starttime="20230314 14:46:16.083" endtime="20230314 14:46:16.084"/>
+</iter>
+<status status="PASS" starttime="20230314 14:46:16.064" endtime="20230314 14:46:16.084"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<msg timestamp="20230314 15:33:07.404" level="FAIL">FOR loop cannot be empty.</msg>
+<status status="FAIL" starttime="20230314 15:33:07.403" endtime="20230314 15:33:07.404"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<msg timestamp="20230314 15:33:19.082" level="FAIL">FOR loop cannot be empty.</msg>
+<status status="FAIL" starttime="20230314 15:33:19.082" endtime="20230314 15:33:19.083"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<msg timestamp="20230314 15:33:40.621" level="FAIL">FOR loop cannot be empty.</msg>
+<status status="FAIL" starttime="20230314 15:33:40.621" endtime="20230314 15:33:40.621"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${count}">1</var>
+<kw name="${order}${count}">
+<msg timestamp="20230314 15:34:03.015" level="FAIL">No keyword with name '${order}${count}' found.</msg>
+<status status="FAIL" starttime="20230314 15:34:03.015" endtime="20230314 15:34:03.016"/>
+</kw>
+<status status="FAIL" starttime="20230314 15:34:03.004" endtime="20230314 15:34:03.016"/>
+</iter>
+<status status="FAIL" starttime="20230314 15:34:03.004" endtime="20230314 15:34:03.016"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${count}">1</var>
+<kw name="${order}[count]">
+<msg timestamp="20230314 15:34:13.108" level="FAIL">No keyword with name '${order}[count]' found.</msg>
+<status status="FAIL" starttime="20230314 15:34:13.108" endtime="20230314 15:34:13.108"/>
+</kw>
+<status status="FAIL" starttime="20230314 15:34:13.098" endtime="20230314 15:34:13.108"/>
+</iter>
+<status status="FAIL" starttime="20230314 15:34:13.097" endtime="20230314 15:34:13.108"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${count}">1</var>
+<kw name="${order}[${count}]">
+<msg timestamp="20230314 15:34:22.092" level="FAIL">No keyword with name '${order}[${count}]' found.</msg>
+<status status="FAIL" starttime="20230314 15:34:22.092" endtime="20230314 15:34:22.093"/>
+</kw>
+<status status="FAIL" starttime="20230314 15:34:22.082" endtime="20230314 15:34:22.093"/>
+</iter>
+<status status="FAIL" starttime="20230314 15:34:22.082" endtime="20230314 15:34:22.094"/>
+</for>
+<for flavor="IN RANGE">
+<var>${count}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${count}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.275" endtime="20230314 15:34:39.276"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.275" endtime="20230314 15:34:39.276"/>
+</iter>
+<iter>
+<var name="${count}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.276" endtime="20230314 15:34:39.276"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.276" endtime="20230314 15:34:39.276"/>
+</iter>
+<iter>
+<var name="${count}">3</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.276" endtime="20230314 15:34:39.277"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.276" endtime="20230314 15:34:39.277"/>
+</iter>
+<iter>
+<var name="${count}">4</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.277" endtime="20230314 15:34:39.277"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.277" endtime="20230314 15:34:39.277"/>
+</iter>
+<iter>
+<var name="${count}">5</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.277" endtime="20230314 15:34:39.278"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.277" endtime="20230314 15:34:39.278"/>
+</iter>
+<iter>
+<var name="${count}">6</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.278" endtime="20230314 15:34:39.278"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.278" endtime="20230314 15:34:39.278"/>
+</iter>
+<iter>
+<var name="${count}">7</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.279" endtime="20230314 15:34:39.279"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.279" endtime="20230314 15:34:39.279"/>
+</iter>
+<iter>
+<var name="${count}">8</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.279" endtime="20230314 15:34:39.279"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.279" endtime="20230314 15:34:39.279"/>
+</iter>
+<iter>
+<var name="${count}">9</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.280" endtime="20230314 15:34:39.280"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.279" endtime="20230314 15:34:39.280"/>
+</iter>
+<iter>
+<var name="${count}">10</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.280" endtime="20230314 15:34:39.281"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.280" endtime="20230314 15:34:39.281"/>
+</iter>
+<iter>
+<var name="${count}">11</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.282" endtime="20230314 15:34:39.299"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.282" endtime="20230314 15:34:39.299"/>
+</iter>
+<iter>
+<var name="${count}">12</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230314 15:34:39.299" endtime="20230314 15:34:39.300"/>
+</kw>
+<status status="PASS" starttime="20230314 15:34:39.299" endtime="20230314 15:34:39.300"/>
+</iter>
+<iter>
+<var name="${count}">13</var>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>
